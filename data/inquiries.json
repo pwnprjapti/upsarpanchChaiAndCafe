@@ -1,0 +1,15 @@
+[
+  {
+    "id": "UPS-153255",
+    "timestamp": "2026-09-08T05:42:33.255Z",
+    "name": "Aman Verma",
+    "phone": "9829012345",
+    "date": "2026-09-10",
+    "slot": "06:00 PM – 08:00 PM",
+    "guests": 6,
+    "occasion": "Birthday Party",
+    "notes": "Happy Birthday Aman on cake",
+    "calculatedTotal": 2249,
+    "status": "pending_advance"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "name": "upsarpanch-party-catalogue",
+  "version": "1.0.0",
+  "description": "Interactive Party Package Catalogue & Booking Portal for Upsarpanch Chai & Cafe, Jaipur",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "upsarpanch",
+    "cafe",
+    "catalogue",
+    "party-booking",
+    "jaipur",
+    "birthday-package"
+  ],
+  "author": "Upsarpanch Chai & Cafe",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
