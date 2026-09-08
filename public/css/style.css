@@ -1,7 +1,7 @@
 /* ===================================================
    Upsarpanch Chai & Cafe - Premium Party Catalogue Styles
    Palette: Warm Espresso, Caramel, Amber Gold & Cream
-   Fully Mobile-First & Cross-Device Responsive
+   Fully Mobile-First, Touch-Optimized & 100% Responsive
    =================================================== */
 
 :root {
@@ -70,7 +70,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Typography & General Helpers */
+/* Typography & Helpers */
 h1, h2, h3, h4, h5 {
   color: inherit;
   font-weight: 700;
@@ -135,14 +135,14 @@ img, svg {
   justify-content: space-between;
 }
 
-/* Universal Buttons */
+/* Universal Buttons - Fully Mobile Friendly */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 12px 22px;
-  min-height: 46px;
+  padding: 12px 20px;
+  min-height: 48px;
   font-size: 0.95rem;
   font-weight: 600;
   border-radius: var(--radius-full);
@@ -152,7 +152,11 @@ img, svg {
   font-family: inherit;
   text-align: center;
   user-select: none;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+  line-height: 1.35;
+  box-sizing: border-box;
 }
 
 .btn-primary {
@@ -192,6 +196,7 @@ img, svg {
 .btn-glass {
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.25);
   color: #ffffff;
 }
@@ -201,7 +206,7 @@ img, svg {
 }
 
 .btn-lg {
-  padding: 14px 26px;
+  padding: 14px 24px;
   min-height: 52px;
   font-size: 1.02rem;
 }
@@ -239,7 +244,7 @@ img, svg {
 .top-contact {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .top-contact a {
@@ -268,6 +273,7 @@ img, svg {
   display: flex;
   align-items: center;
   gap: 10px;
+  min-width: 0;
 }
 
 .brand-logo-icon {
@@ -321,6 +327,7 @@ img, svg {
   display: flex;
   gap: 8px;
   align-items: center;
+  flex-shrink: 0;
 }
 
 /* Hero Section */
@@ -488,6 +495,7 @@ img, svg {
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), var(--shadow-glow);
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .visual-header {
@@ -586,9 +594,11 @@ img, svg {
   color: #94a3b8;
 }
 
-/* Sections */
+/* Sections Global */
 .section {
-  padding: 60px 0;
+  padding: 55px 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 .section-dark {
@@ -601,7 +611,7 @@ img, svg {
 }
 
 .section-heading {
-  margin-bottom: 36px;
+  margin-bottom: 34px;
 }
 
 .section-tag {
@@ -615,24 +625,25 @@ img, svg {
 }
 
 .section-title {
-  font-size: clamp(1.5rem, 3.8vw, 2.2rem);
+  font-size: clamp(1.45rem, 3.8vw, 2.2rem);
   font-weight: 800;
   letter-spacing: -0.4px;
   margin-bottom: 10px;
 }
 
 .section-subtitle {
-  font-size: clamp(0.9rem, 2.2vw, 1.05rem);
+  font-size: clamp(0.88rem, 2.2vw, 1.05rem);
   color: var(--text-muted);
   max-width: 620px;
   margin: 0 auto;
 }
 
-/* Inclusions Grid - Perfectly Responsive */
+/* Inclusions Grid */
 .inclusions-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
+  width: 100%;
 }
 
 .inclusion-card {
@@ -645,6 +656,8 @@ img, svg {
   position: relative;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .inclusion-card:hover {
@@ -791,12 +804,14 @@ img, svg {
   padding: 28px 22px;
   box-shadow: var(--shadow-lg);
   width: 100%;
+  box-sizing: border-box;
 }
 
 .calc-inputs {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  min-width: 0;
 }
 
 .input-group label {
@@ -903,16 +918,19 @@ img, svg {
 /* Custom Input - 16px to prevent iOS zoom */
 .custom-input {
   width: 100%;
+  max-width: 100%;
   padding: 12px 14px;
   border-radius: var(--radius-sm);
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.08);
   color: #ffffff;
-  font-size: 16px; /* Crucial for iOS: prevents auto-zooming */
+  font-size: 16px;
   font-family: inherit;
   outline: none;
   transition: var(--transition);
   min-height: 48px;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .custom-input:focus {
@@ -941,6 +959,7 @@ img, svg {
   flex-direction: column;
   justify-content: space-between;
   gap: 16px;
+  min-width: 0;
 }
 
 .summary-header {
@@ -1047,6 +1066,7 @@ img, svg {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 14px;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .slot-card {
@@ -1062,6 +1082,8 @@ img, svg {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .slot-card:hover, .slot-card:active {
@@ -1111,58 +1133,86 @@ img, svg {
   max-width: fit-content;
   margin: 0 auto;
   font-size: 0.9rem;
+  box-sizing: border-box;
 }
 
-/* Booking Form */
+/* ===================================================
+   INSTANT BOOKING & INQUIRY SECTION (Mobile-Perfect)
+   =================================================== */
 .booking-wrapper {
   display: grid;
   grid-template-columns: 1.25fr 0.75fr;
   gap: 28px;
   align-items: flex-start;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .booking-card {
   background: #ffffff;
   border-radius: var(--radius-lg);
-  padding: 28px 22px;
+  padding: 30px 24px;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border-light);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .booking-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 14px;
   margin-bottom: 22px;
   border-bottom: 1px solid #f3f4f6;
   padding-bottom: 14px;
+  width: 100%;
 }
 
 .booking-header-icon {
   font-size: 2rem;
+  line-height: 1;
   flex-shrink: 0;
 }
 
 .booking-header h2 {
-  font-size: 1.3rem;
+  font-size: clamp(1.15rem, 3.2vw, 1.35rem);
   color: #1f1712;
+  margin-bottom: 4px;
 }
 
 .booking-header p {
-  font-size: 0.84rem;
+  font-size: clamp(0.78rem, 2.2vw, 0.86rem);
   color: #6b7280;
+  line-height: 1.4;
 }
 
 .booking-form {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .form-row-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .form-field label {
@@ -1171,20 +1221,30 @@ img, svg {
   font-weight: 600;
   color: #374151;
   margin-bottom: 6px;
+  overflow-wrap: break-word;
 }
 
 .booking-notice-card {
   display: flex;
-  gap: 10px;
+  align-items: flex-start;
+  gap: 12px;
   background: #fffbeb;
   border: 1px solid #fde68a;
-  padding: 12px;
+  padding: 14px;
   border-radius: var(--radius-sm);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .notice-icon {
   font-size: 1.3rem;
+  line-height: 1;
   flex-shrink: 0;
+}
+
+.notice-content {
+  min-width: 0;
+  flex: 1;
 }
 
 .notice-content strong {
@@ -1197,13 +1257,25 @@ img, svg {
 .notice-content p {
   font-size: 0.8rem;
   color: #b45309;
+  line-height: 1.4;
 }
 
 .form-action-group {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   margin-top: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-action-group .btn {
+  width: 100%;
+  padding: 14px 18px;
+  min-height: 52px;
+  font-size: clamp(0.9rem, 2.6vw, 1.02rem);
+  text-align: center;
+  box-sizing: border-box;
 }
 
 /* Booking Sidebar */
@@ -1211,15 +1283,21 @@ img, svg {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .quick-call-card {
   background: linear-gradient(135deg, #2a2017, #191410);
   color: white;
   border-radius: var(--radius-lg);
-  padding: 22px;
+  padding: 24px 20px;
   text-align: center;
   border: 1px solid var(--border-dark);
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .call-badge {
@@ -1255,11 +1333,13 @@ img, svg {
   padding: 12px 20px;
   min-height: 48px;
   border-radius: var(--radius-full);
-  font-size: 1.2rem;
+  font-size: clamp(1.1rem, 3.5vw, 1.3rem);
   font-weight: 800;
   letter-spacing: 0.5px;
   margin-bottom: 10px;
   width: 100%;
+  box-sizing: border-box;
+  white-space: normal;
 }
 
 .call-button:hover, .call-button:active {
@@ -1276,8 +1356,11 @@ img, svg {
 .package-recap-box {
   background: #ffffff;
   border-radius: var(--radius-lg);
-  padding: 20px;
+  padding: 22px 20px;
   border: 1px solid var(--border-light);
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .package-recap-box h4 {
@@ -1308,19 +1391,26 @@ img, svg {
   flex-shrink: 0;
 }
 
-/* Rules & Guidelines */
+/* ===================================================
+   RULES & GUIDELINES CARDS (Mobile-Perfect)
+   =================================================== */
 .rules-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .rule-card {
   background: #ffffff;
   border-radius: var(--radius-md);
-  padding: 20px 18px;
+  padding: 22px 18px;
   border: 1px solid var(--border-light);
   transition: var(--transition);
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .rule-card.rule-warning {
@@ -1346,14 +1436,25 @@ img, svg {
 .rule-card p {
   font-size: 0.84rem;
   color: #6b7280;
+  line-height: 1.45;
 }
 
-/* Location Section */
+/* ===================================================
+   LOCATION & DIRECTION SECTION (Mobile-Perfect)
+   =================================================== */
 .location-wrapper {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 32px;
   align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.location-info {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .cafe-address {
@@ -1367,6 +1468,7 @@ img, svg {
   font-size: 0.88rem;
   color: var(--text-light-muted);
   margin-bottom: 20px;
+  line-height: 1.45;
 }
 
 .location-highlights {
@@ -1404,6 +1506,19 @@ img, svg {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  width: 100%;
+}
+
+.location-btns .btn {
+  white-space: normal;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.location-map-card {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .map-placeholder {
@@ -1413,6 +1528,8 @@ img, svg {
   padding: 32px 18px;
   text-align: center;
   box-shadow: var(--shadow-md);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .big-store-icon {
@@ -1440,6 +1557,8 @@ img, svg {
   padding: 24px 0;
   font-size: 0.82rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .footer-left h3 {
@@ -1460,6 +1579,7 @@ img, svg {
   align-items: center;
   justify-content: center;
   padding: 16px;
+  box-sizing: border-box;
 }
 
 .modal-overlay.active {
@@ -1477,6 +1597,7 @@ img, svg {
   padding: 24px 20px;
   position: relative;
   box-shadow: var(--shadow-lg);
+  box-sizing: border-box;
   animation: modalFadeIn 0.25s ease;
 }
 
@@ -1530,6 +1651,8 @@ img, svg {
   padding: 16px;
   text-align: center;
   margin-bottom: 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .upi-qr-mockup {
@@ -1610,6 +1733,7 @@ img, svg {
   border-top: 1px solid rgba(245, 158, 11, 0.3);
   box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.35);
   gap: 10px;
+  box-sizing: border-box;
 }
 
 .sticky-btn {
@@ -1624,7 +1748,8 @@ img, svg {
   font-size: 0.9rem;
   font-weight: 700;
   text-align: center;
-  white-space: nowrap;
+  white-space: normal;
+  box-sizing: border-box;
 }
 
 .sticky-call {
@@ -1693,14 +1818,16 @@ img, svg {
   
   .booking-wrapper {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
   
   .location-wrapper {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
 }
 
-/* Mobile Devices (max-width: 768px) */
+/* Large Mobile & Tablets Portrait (max-width: 768px) */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -1730,7 +1857,7 @@ img, svg {
   }
 
   .section-heading {
-    margin-bottom: 28px;
+    margin-bottom: 26px;
   }
 
   .inclusions-grid {
@@ -1739,22 +1866,64 @@ img, svg {
   }
 
   .slots-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 10px;
   }
 
   .slot-card {
-    padding: 12px 8px;
-    min-height: 85px;
+    padding: 14px;
+    min-height: 80px;
   }
 
-  .slot-time {
-    font-size: 0.95rem;
+  /* Booking Form Mobile Overhaul */
+  .booking-card {
+    padding: 22px 16px;
   }
 
   .form-row-2 {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+
+  .form-action-group .btn {
+    width: 100%;
+  }
+
+  .quick-call-card {
+    padding: 20px 16px;
+  }
+
+  .package-recap-box {
+    padding: 18px 16px;
+  }
+
+  /* Rules Grid 1 Column on Mobile */
+  .rules-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .rule-card {
+    padding: 18px 16px;
+  }
+
+  /* Location Mobile Overhaul */
+  .location-wrapper {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .location-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .location-btns .btn {
+    width: 100%;
+  }
+
+  .map-placeholder {
+    padding: 26px 16px;
   }
 
   .mobile-sticky-bar {
@@ -1771,16 +1940,8 @@ img, svg {
 
   .main-footer .container {
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
     text-align: center;
-  }
-
-  .location-btns {
-    flex-direction: column;
-  }
-
-  .location-btns .btn {
-    width: 100%;
   }
 }
 
@@ -1801,7 +1962,7 @@ img, svg {
   }
 
   .header-actions .btn-outline span {
-    display: none; /* Show only icon on small mobile */
+    display: none;
   }
 
   .header-actions .btn-outline {
@@ -1862,20 +2023,12 @@ img, svg {
   }
 
   .calculator-box {
-    padding: 20px 14px;
-  }
-
-  .booking-card {
-    padding: 20px 14px;
+    padding: 18px 14px;
   }
 
   .guest-counter {
     justify-content: center;
     width: 100%;
-  }
-
-  .occasion-chips {
-    justify-content: flex-start;
   }
 
   .chip {
@@ -1884,19 +2037,30 @@ img, svg {
     min-height: 38px;
   }
 
-  .slots-grid {
-    grid-template-columns: 1fr; /* Single column on phones for clear readability */
-    gap: 10px;
-  }
-
-  .slot-card {
-    padding: 14px;
-  }
-
   .total-row {
     flex-direction: column;
     align-items: flex-start;
     gap: 6px;
+  }
+
+  /* Booking Card on Small Screens */
+  .booking-card {
+    padding: 18px 12px;
+    border-radius: var(--radius-md);
+  }
+
+  .booking-header {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .booking-notice-card {
+    padding: 10px;
+  }
+
+  .call-button {
+    font-size: 1.1rem;
+    padding: 10px 14px;
   }
 }
 
@@ -1931,12 +2095,16 @@ img, svg {
   }
 
   .visual-icons-grid {
-    grid-template-columns: 1fr; /* Stack on ultra-narrow phones */
+    grid-template-columns: 1fr;
   }
 
   .sticky-btn {
     font-size: 0.82rem;
-    padding: 10px;
+    padding: 10px 6px;
+  }
+
+  .booking-card {
+    padding: 14px 10px;
   }
 }
 
